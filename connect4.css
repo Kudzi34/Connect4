@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    animation-name: backgroundchange;
+    animation-duration: 5s;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+#name {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    position: relative;
+    right: 100px;
+    text-shadow: 1px 6px blue;
+    font-size: 60px;
+}
+#winlogo {
+    position: relative;
+    top: 20px;
+    text-shadow: 1px 2px #00ffc4;
+}
+.buttons {
+    /*background-color:*/
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 30px;
+    box-shadow: 6px 6px black;
+    position: relative;
+    top: 200px;
+}
+
+.slot {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    width: 100px;
+    height: 100px;
+    background: black;
+    padding: 10px;
+}
+.hole:hover {
+    width: 100px;
+}
+
+.hole {
+    transition: 3s;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background: white;
+}
+
+.player1 .hole {
+    background: radial-gradient(#33beff, #6e33ff);
+}
+
+.player2 .hole {
+    background: radial-gradient(#fcff33, #bbff33);
+}
+.modal {
+    background: silver;
+    border: solid #00ffc4 4px;
+    border-radius: 10px;
+    position: absolute;
+    font-family: serif;
+    font-size: 15px;
+    height: 150px;
+    width: 500px;
+    top: 200px;
+    left: 610px;
+    text-align: center;
+    z-index: 10;
+    padding: 10px;
+}
+@keyframes slide {
+    0% {
+        transform: translateZ(50%) scale3d(100%);
+    }
+    50% {
+        transform: translateY(100px) rotate(360deg);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes backgroundchange {
+    from {
+        background-color: grey;
+    }
+    to {
+        background-color: black;
+    }
+}
